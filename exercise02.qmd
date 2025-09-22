@@ -1,7 +1,7 @@
 ---
 title: "Getting started with R and Python"
 date: 2025-09-22
-author: "Your name"
+author: "Pegah Palizban"
 format: html
 embed-resources: true
 ---
@@ -9,6 +9,7 @@ embed-resources: true
 ## Getting started
 
 ### Name concepts of a programming language
+Some concepts of a programming language are variables, data structures and data types, functions, assignment, and debugging.
 
 > Write answer here 
 
@@ -17,22 +18,21 @@ embed-resources: true
  - Calculate `2 + 6 * 5 ^ 2`
  
 ```{r}
-# Write answer here
+2 + 6 * 5 ^ 2
 ```
 
-
  - Which operator has the higher priority?
+ Exponentiation has the higher priority.
 
 ::: unilur-solution
 Exponentiation
-
 ::: 
 
  - Change the order of execution giving priority to `+`
 
 
 ```{r}
-# Write answer here
+(2 + 6) * 5 ^ 2
 ```
  
 
@@ -46,21 +46,41 @@ b = 10
 ```
 
 ```{python}
-# Write answer here
+# the first way:
+e = a
+a = b
+b = e
+print(a, b)
+
+# the second way:
+a = a + b
+b = a - b
+a = a - b
+print(a, b)
+
+# the third way:
+a, b = b, a
+print(a, b)
+```
+## Another way to print something 
+```{python}
+(a, b)
 ```
 
 ### What is the output of the following code?
 
 ```{python}
-# Write answer here
+x = 7
+1 < x < 10 < x + 3 <= 13
 ```
 
 Explain in your words!
 
-::: unilur-solution
-Python parses four expressions, 1 < x and x < 10 and 10 < x + 3 and x + 3 <= 13 [ ] True or [ ] False 
-:::
-
+There are four expressions: 
+1) 1 < x -> true
+2) x < 10 -> false
+3) 10 < x + 3 -> true
+4) x + 3 <= 13 -> true
 
 ### Missing values
 
