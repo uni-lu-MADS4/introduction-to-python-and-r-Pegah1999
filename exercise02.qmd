@@ -99,9 +99,19 @@ Consider `is.na()` to identify indeces of missing positions.
  * Replace NAs with 0. 
  
  * How large is error that you make when ignore missing values?
+ 
 
 ```{r}
 # Write answer here
+v <- c(18, 20, 34, 53, 12, NA, NA, 72, 75, 13)
+
+avg <- mean(v)
+
+avg_omit <- mean(na.omit(v))
+
+avg_replace <- mean(replace(v, is.na(v), 0))
+
+err <-  avg_omit - avg_replace
 ```
 
 ### Create a data frame
@@ -115,16 +125,28 @@ Paul  | 16  | 57.0 |green  |   1
 
 ```{r}
 # Write answer here
+df <- data.frame(
+  name = c("Paul", "Mary", "Sara", "John"),
+  age = c(16, 16, 16, 17),
+  weight = c(57, 50, 52.6, 65.3),
+  eye = c("green", "blue", "black", "blue"),
+  group = c(1, 1, 2, 2)
+)
 ```
 
 Assign the data frame to a variable named `classroom`.
+(Instead of rewriting the dataframe in Python, I found "r.df" that assign r to 
+a Python variable.)
 
 Describe the type of variables in `classroom`.
 
 Which data structure would you use in base Python?
 
+
 ```{python}
 # Write answer here
+classroom = r.df
+type(classroom)
 ```
 
 
